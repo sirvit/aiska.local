@@ -38,9 +38,9 @@ class City extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'c_id' => 'C ID',
-            'c_name' => 'C Name',
-            'c_path' => 'C Path',
+            'c_id' => 'id города',
+            'c_name' => 'Название города',
+            'c_path' => 'Путь города',
         ];
     }
 }
