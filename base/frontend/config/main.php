@@ -8,7 +8,7 @@ $params = array_merge(
 //если шаблон advenced
 return [
     'id' => 'app-frontend',
-    'name' => 'АИС FUJI',
+    'name' => 'АИСКА Прием',
     'language' => 'ru-RU',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
@@ -44,7 +44,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '' => 'proekt/index',
+                '' => 'site/index',
 //                'proekt/<id:\d+>' => 'proekt/view',
 //                '<controller>/<id:\d+>' => '<controller>/view',
 //                '<controller>/<action>' => '<controller>/<action>',
