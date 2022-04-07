@@ -42,8 +42,12 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Вход', 'url' => ['/site/login']];
     } else {
      $menuItems = [
-       ['label' => 'Города', 'url' => ['/city/']],
-        ['label' => 'Улицы', 'url' => ['/street/']],
+         ['label' => 'Прием', 'url' => ['/priem/']],
+             ['label' => 'Справочники','items' =>[
+                ['label' => 'Города', 'url' => ['/city/']],
+                ['label' => 'Улицы', 'url' => ['/street/']],
+                 ]
+     ],
         ];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
