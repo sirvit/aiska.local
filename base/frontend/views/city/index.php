@@ -27,9 +27,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 //            ['class' => 'yii\grid\SerialColumn'],
 
-            'c_id',
+            //'c_id',
+            ['attribute' => 'c_id',
+//                'label' =>'Filename'
+                'contentOptions' => ['style' => 'width:100px;  min-width:100px;  text-align:center; '],
+            ],
             'c_name',
-            'c_path',
+            //'c_path',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

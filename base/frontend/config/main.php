@@ -44,7 +44,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '' => 'site/index',
+                '' => 'priem/index',
 //                'proekt/<id:\d+>' => 'proekt/view',
 //                '<controller>/<id:\d+>' => '<controller>/view',
 //                '<controller>/<action>' => '<controller>/<action>',

@@ -10,7 +10,7 @@ use common\models\Street;
 /* @var $searchModel common\models\StreetSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Streets';
+$this->title = 'Улицы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="street-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Street', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить Улицу', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php Pjax::begin(); ?>
@@ -30,9 +30,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
 //            ['class' => 'yii\grid\SerialColumn'],
 
-            's_id',
+            //'s_id',
+            ['attribute' => 's_id',
+//                'label' =>'Filename'
+                'contentOptions' => ['style' => 'width:100px;  min-width:100px;  text-align:center; '],
+            ],
             's_name',
-            's_path',
+            //'s_path',
 //work one
 //            ['class' => 'yii\grid\ActionColumn'],
 

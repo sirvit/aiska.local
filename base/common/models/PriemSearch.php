@@ -47,6 +47,8 @@ class PriemSearch extends Priem
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort' => [
+                'defaultOrder' => ['priem_id' => SORT_DESC]]
         ]);
 
         $this->load($params);

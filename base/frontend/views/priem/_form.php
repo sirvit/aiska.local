@@ -2,6 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use common\models\City;
+use common\models\Street;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Priem */
@@ -16,9 +18,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'data_pz')->textInput() ?>
 
-    <?= $form->field($model, 'gorod')->textInput() ?>
+    <?= $form->field($model, 'gorod')->dropDownList(City::find()->select(['c_name','c_id'])->indexBy('c_id')->column(),['prompt'=>'']) ?>
 
-    <?= $form->field($model, 'ulica')->textInput() ?>
+    <?= $form->field($model, 'ulica')->dropDownList(Street::find()->select(['s_name','s_id'])->indexBy('s_id')->column(),['prompt'=>'']) ?>
 
     <?= $form->field($model, 'd_u')->textInput() ?>
 

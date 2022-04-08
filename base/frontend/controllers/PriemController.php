@@ -40,6 +40,7 @@ class PriemController extends Controller
     {
         $searchModel = new PriemSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+        
 
         return $this->render('index', [
             'searchModel' => $searchModel,

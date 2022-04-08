@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Priem */
@@ -32,8 +33,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'priem_id',
             'nomer',
             'data_pz',
-            'gorod',
-            'ulica',
+//            'gorod',
+            [
+                'attribute'=>'gorod',
+                'value' => ArrayHelper::getValue($model, 'city.c_name'), // 'city.c_name',
+            ],
+//            'ulica',
+            [
+                'attribute'=>'ulica',
+                'value' => ArrayHelper::getValue($model, 'street.s_name'), // 'street.s_name',
+            ],
             'd_u',
             'dom',
             'kvartira',
